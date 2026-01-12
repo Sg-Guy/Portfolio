@@ -54,6 +54,7 @@ const infoProjet = {
   };
 function App() {
   const [darkMode, setDarkMode] = useState(true);
+  const [open , setOpen]=useState(false) ;
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -177,8 +178,10 @@ function App() {
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
+            style={{backgroundColor: darkMode ? 'white':''}}
+            onClick={()=>setOpen(!open)}
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-close"> {open ? '✕': '☰'}</span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarNav">
