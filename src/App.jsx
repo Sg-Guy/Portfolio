@@ -11,7 +11,7 @@ import {
   SiFastapi,
   SiSqlite,
   SiOracle,
-  SiCss3,
+  SiCss3, 
   SiFacebook,
   SiGithub,
   SiLinkedin,
@@ -26,35 +26,34 @@ import tech from "./assets/tech.png";
 import zone from "./assets/zone.png";
 
 const infoProjet = {
-    projet1: {
-      name: "TechZone",
-      image: zone,
-      description:
-        "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile... ",
-      technologies: ["Dart", "Flutter", "Laravel", "MySql"],
-        
-      details: "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile. Il s'agit d'une application de vente d'objet technologique en ligne.",
-    },
-    projet2: {
-      name: "CampusConnect",
-      image: campus,
-      description:
-        "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application web . Il s'agit d'une application de vente d'objet technologique en ligne.",
-      technologies: ["PHP","Laravel", "MySql"],
+  projet1: {
+    name: "TechZone",
+    image: zone,
+    description:
+      "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile... ",
+    technologies: ["Dart", "Flutter", "Laravel", "MySql"],
 
-    },
-    projet3: {
-      name: "StepByStep",
-      image: step,
-      description:
-        "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile. Il s'agit d'une application de vente d'objet technologique en ligne.",
-      technologies: ["PHP", "Laravel", "MySql"],
-
-    },
-  };
+    details:
+      "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile. Il s'agit d'une application de vente d'objet technologique en ligne.",
+  },
+  projet2: {
+    name: "CampusConnect",
+    image: campus,
+    description:
+      "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application web . Il s'agit d'une application de vente d'objet technologique en ligne.",
+    technologies: ["PHP", "Laravel", "MySql"],
+  },
+  projet3: {
+    name: "StepByStep",
+    image: step,
+    description:
+      "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile. Il s'agit d'une application de vente d'objet technologique en ligne.",
+    technologies: ["PHP", "Laravel", "MySql"],
+  },
+};
 function App() {
   const [darkMode, setDarkMode] = useState(true);
-  const [open , setOpen]=useState(false) ;
+  const [open, setOpen] = useState(false);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -164,8 +163,6 @@ function App() {
     },
   };
 
-  
-
   return (
     <div style={styles.body}>
       {/* Navigation */}
@@ -178,10 +175,16 @@ function App() {
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
-            style={{backgroundColor: darkMode ? 'white':''}}
-            onClick={()=>setOpen(!open)}
+            style={{ backgroundColor: darkMode ? "white" : "" }}
+            onClick={() => setOpen(!open)}
           >
-            <span className="navbar-close"> {open ? '✕': '☰'}</span>
+            <span
+              className="navbar-close"
+              style={{ fontSize: "1.5rem", lineHeight: 1 }}
+            >
+              {" "}
+              {open ? "✕" : "☰"}
+            </span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarNav">
@@ -256,7 +259,6 @@ function App() {
 
       {/* Hero Section */}
       <section
-      
         id="accueil"
         className="min-vh-100 d-flex align-items-center"
         style={{ paddingTop: "80px" }}
@@ -349,6 +351,21 @@ function App() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="formations" className="container">
+        <div>
+          2023-now. <br />
+          Licence en Gl "En cours"
+        </div>
+        <div>
+          Juin 2023. <br />
+          Bac D "Mention Bien"
+        </div>
+        <div>
+          Juin 2024. <br />
+          Bac C "Mention A.Bien"
         </div>
       </section>
 
@@ -495,14 +512,14 @@ function App() {
                 styles={styles}
                 name={infoProjet.projet1.name}
                 description={infoProjet.projet1.description}
-                technologies= {infoProjet.projet1.technologies}
+                technologies={infoProjet.projet1.technologies}
               />
               <ProjectCard
                 darkMode={darkMode}
                 image={infoProjet.projet2.image}
                 name={infoProjet.projet2.name}
                 description={infoProjet.projet2.description}
-                technologies= {infoProjet.projet2.technologies}
+                technologies={infoProjet.projet2.technologies}
                 styles={styles}
               />
               <ProjectCard
@@ -511,7 +528,7 @@ function App() {
                 styles={styles}
                 name={infoProjet.projet3.name}
                 description={infoProjet.projet3.description}
-                technologies= {infoProjet.projet3.technologies}
+                technologies={infoProjet.projet3.technologies}
               />
             </div>
           </div>
@@ -543,7 +560,7 @@ function App() {
                         className="mb-0"
                         style={{ color: darkMode ? "#f1f5f9" : "#212529" }}
                       >
-                        guyi@gmail.com
+                        gsagbo541@gmail.com
                       </h5>
                     </div>
                   </div>
@@ -565,7 +582,7 @@ function App() {
                         className="mb-0"
                         style={{ color: darkMode ? "#f1f5f9" : "#212529" }}
                       >
-                        +229 01 51 65 83
+                        +229 01 51 42 63 20
                       </h5>
                     </div>
                   </div>
@@ -575,12 +592,22 @@ function App() {
           </div>
 
           <div className="d-flex justify-content-center gap-4">
-            <a href="https://github.com/Sg-Guy/Portfolio">
-              <SocialIcon icon={<SiFacebook size={24} />} styles={styles} />
-            </a>
+            <SocialIcon icon={<SiFacebook size={24} />} styles={styles}  url={"https://www.facebook.com/SG.Zathianos"}/>
 
-            <SocialIcon icon={<SiGithub size={24} />} styles={styles} />
-            <SocialIcon icon={<SiLinkedin size={24} />} styles={styles} />
+            <div
+              onClick={() =>
+                window.open(
+                  "https://github.com/Sg-Guy/",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+              style={{ cursor: "pointer" }}
+            >
+              <SocialIcon icon={<SiGithub size={24} />} styles={styles} url={"https://github.com/Sg-Guy/"}/>
+            </div>
+
+            <SocialIcon icon={<SiLinkedin size={24} />} styles={styles} url={"https://github.com/Sg-Guy/"} />
           </div>
         </div>
       </section>
@@ -591,7 +618,7 @@ function App() {
         style={{ backgroundColor: darkMode ? "#0f172a" : "#e9ecef" }}
       >
         <p className="mb-0" style={styles.textMuted}>
-          © 2026 | Portfolio | Guillaume SAGBO. Tous droits réservés.
+          © 2026 | Guillaume SAGBO. Tous droits réservés.
         </p>
       </footer>
     </div>
@@ -629,11 +656,17 @@ function SkillCard({ icon, name, darkMode, styles }) {
 }
 
 // Project Card Component
-function ProjectCard({ darkMode, image, styles, name, description , technologies}) {
+function ProjectCard({
+  darkMode,
+  image,
+  styles,
+  name,
+  description,
+  technologies,
+}) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    
     <div className="col-md-6 col-lg-4">
       <div
         className="card h-100"
@@ -672,10 +705,10 @@ function ProjectCard({ darkMode, image, styles, name, description , technologies
             {description}
           </p>
 
-            <MapTech elements={technologies}/>
-         
-          
-          <a href="#"
+          <MapTech elements={technologies} />
+
+          <a
+            href="#"
             className="text-decoration-none fw-semibold"
             style={{ color: "#667eea" }}
           >
@@ -683,21 +716,22 @@ function ProjectCard({ darkMode, image, styles, name, description , technologies
           </a>
         </div>
       </div>
-      
     </div>
   );
 }
 
 // Social Icon Component
-function SocialIcon({ icon, styles }) {
+function SocialIcon({ icon, styles , url }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <a
-      href="#"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
       style={{
         ...styles.socialIcon,
-        transform: isHovered ? "scale(1.1)" : "scale(1)",
+        transform: isHovered ? "scale(1.3)" : "scale(1)",
         cursor: "pointer",
       }}
       onMouseEnter={() => setIsHovered(true)}
@@ -708,16 +742,20 @@ function SocialIcon({ icon, styles }) {
   );
 }
 
-
 function MapTech({ elements }) {
   return (
     <div className="d-flex flex-row gap-3 ">
       {elements.map((element, index) => (
-        <span className="badge text-bg-light text-center rounded-pill opacity-75" key={index} style={{height:"20px"}}>{element}</span>
+        <span
+          className="badge text-bg-light text-center rounded-pill opacity-75"
+          key={index}
+          style={{ height: "20px" }}
+        >
+          {element}
+        </span>
       ))}
     </div>
   );
 }
-
 
 export default App;
