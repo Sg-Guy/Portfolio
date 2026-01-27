@@ -8,14 +8,13 @@ import step from "./assets/step.png";
 import campus from "./assets/campus.png";
 import tech from "./assets/tech.png";
 import zone from "./assets/zone.png";
-import ident_guy from "./assets/ident_guy.jpg";
+import ident_guy from "./assets/ident_guy.jpeg";
 import SocialIcon from "./SocialIcon";
 import SkillCard from "./SkillCard";
 import Formations from "./Formations";
 import Competences from "./Competences";
 import ProjectCard from "./ProjectCard";
 import scrollToSection from "./ScrollToSection";
-import AntiInspect from "./AntiInspect";
 import DevToolsWarning from "./DevToolWarning";
 
 const infoProjet = {
@@ -23,7 +22,7 @@ const infoProjet = {
     name: "TechZone",
     image: zone,
     description:
-      "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile... ",
+      "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile.Il s'agit d'une application de vente d'objet technologique en ligne.  ",
     technologies: ["Dart", "Flutter", "Laravel", "MySql"],
 
     details:
@@ -33,15 +32,15 @@ const infoProjet = {
     name: "CampusConnect",
     image: campus,
     description:
-      "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application web . Il s'agit d'une application de vente d'objet technologique en ligne.",
+      "Campus connect est un mini système d'information universitaire. Développé lors d'un cours , j'ai collaboré avec d'autres personnes. J'ai été à la fois au front-end et au back-end.",
     technologies: ["PHP", "Laravel", "MySql"],
   },
   projet3: {
     name: "StepByStep",
     image: step,
     description:
-      "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile. Il s'agit d'une application de vente d'objet technologique en ligne.",
-    technologies: ["PHP", "Laravel", "MySql"],
+      "Il s'agit d'une application web de gestionnaire de tâches . Développé en solo , j'ai appris à concevoir un système complet allant du cahier des charges au déploiement." ,
+      technologies: ["PHP", "Laravel", "MySql"],
   },
 };
 
@@ -523,7 +522,7 @@ function App() {
             <SocialIcon
               icon={<SiLinkedin size={24} />}
               styles={styles}
-              url={"https://github.com/Sg-Guy/"}
+              url={"https://www.linkedin.com/in/guillaume-sagbo-1aaa502a5"}
             />
           </div>
         </div>
