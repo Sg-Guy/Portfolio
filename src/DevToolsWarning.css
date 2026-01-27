@@ -1,0 +1,22 @@
+.devtools-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.95); /* fond sombre semi-transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.devtools-content {
+  text-align: center;
+  color: #38bdf8; /* bleu clair */
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  border: 2px solid #0ea5e9;
+  border-radius: 12px;
+  background-color: #1e293b; /* légèrement plus clair */
+}

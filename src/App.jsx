@@ -16,6 +16,7 @@ import Competences from "./Competences";
 import ProjectCard from "./ProjectCard";
 import scrollToSection from "./ScrollToSection";
 import AntiInspect from "./AntiInspect";
+import DevToolsWarning from "./DevToolWarning";
 
 const infoProjet = {
   projet1: {
@@ -158,7 +159,7 @@ function App() {
   };
   return (
     <div style={styles.body}>
-      <AntiInspect />
+      <DevToolsWarning />
       {/* Navigation */}
       <nav className="navbar navbar-expand-lg fixed-top" style={styles.navbar}>
         <div className="container d-flex justify-content-between align-items-center">
