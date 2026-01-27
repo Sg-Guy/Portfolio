@@ -128,7 +128,7 @@ function Competences () {
           <div className="mb-5">
             <h3
               className="h3 fw-semibold mb-4"
-              style={{ color: App.darkMode ? "#f1f5f9" : "#212529" }}
+              
             >
               Front-end
             </h3>
@@ -164,7 +164,6 @@ function Competences () {
           <div className="mb-5">
             <h3
               className="h3 fw-semibold mb-4"
-              style={{ color: App.darkMode ? "#f1f5f9" : "#212529" }}
             >
               Back-end
             </h3>
@@ -194,7 +193,6 @@ function Competences () {
           <div className="mb-5">
             <h3
               className="h3 fw-semibold mb-4"
-              style={{ color: App.darkMode ? "#f1f5f9" : "#212529" }}
             >
               Base de données
             </h3>
@@ -224,7 +222,6 @@ function Competences () {
           <div>
             <h3
               className="h3 fw-semibold mb-4"
-              style={{ color: App.darkMode ? "#f1f5f9" : "#212529" }}
             >
               CMS
             </h3>
