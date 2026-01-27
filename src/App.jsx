@@ -15,6 +15,7 @@ import Formations from "./Formations";
 import Competences from "./Competences";
 import ProjectCard from "./ProjectCard";
 import scrollToSection from "./ScrollToSection";
+import AntiInspect from "./AntiInspect";
 
 const infoProjet = {
   projet1: {
@@ -157,6 +158,7 @@ function App() {
   };
   return (
     <div style={styles.body}>
+      <AntiInspect />
       {/* Navigation */}
       <nav className="navbar navbar-expand-lg fixed-top" style={styles.navbar}>
         <div className="container d-flex justify-content-between align-items-center">
@@ -292,9 +294,9 @@ function App() {
                 <SocialIcon
                   icon={<SiLinkedin size={30} />}
                   styles={styles}
-                  url={"https://github.com/Sg-Guy/"}
-                />{" "}
-              </div>{" "}
+                  url={"https://www.linkedin.com/in/guillaume-sagbo-1aaa502a5"}
+                />
+              </div>
               <br />
               <p
                 className="lead mb-5"
