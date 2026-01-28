@@ -3,7 +3,7 @@ import DarkMode from "./DarkMode";
 
 // Project Card Component
 function ProjectCard({
-  darkMode,
+  url,
   image,
   styles,
   name,
@@ -25,7 +25,10 @@ function ProjectCard({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div
+        <a href={url }  
+          target="_blank"
+        >
+          <div
           style={{
             backgroundSize: "cover", // L'image couvre toute la div
             backgroundPosition: "center", // Centrage de l'image
@@ -37,6 +40,7 @@ function ProjectCard({
             //background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
           }}
         ></div>
+        </a>
         <div className="card-body p-4">
           <h5
             className="card-title fw-bold mb-3"

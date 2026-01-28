@@ -12,6 +12,13 @@ import {
   SiFastapi,
   SiSqlite,
   SiOracle,
+  SiGit,
+  SiVscodium,
+  SiPython,
+  SiJavascript,
+  SiC,
+  SiCplusplus,
+  SiXcode,
 } from "react-icons/si";
 
 function Competences () {
@@ -124,6 +131,42 @@ function Competences () {
     },
   };
     return <div>
+        {/* Langages de programmation */}
+          <div className="mb-5">
+            <h3
+              className="h3 fw-semibold mb-4"
+              
+            >
+              Langages de programmation
+            </h3>
+            <div className="row g-4">
+              <SkillCard
+                icon={<SiPhp size={50} color="#7c0a73" />}
+                name="PHP"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+              <SkillCard
+                icon={<SiPython size={50} color="#525cf1da" />}
+                name="Python"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+              <SkillCard
+                icon={<SiJavascript size={50} color="#f5e83c" />}
+                name="Js"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+              <SkillCard
+                icon={<SiCplusplus size={50} color="#02569B" />}
+                name="C++"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+            </div>
+          </div>
+          <br />
         {/* Frontend */}
           <div className="mb-5">
             <h3
@@ -229,6 +272,30 @@ function Competences () {
               <SkillCard
                 icon={<SiWordpress size={50} color="#21759B" />}
                 name="WordPress"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+            </div>
+          </div>
+<br />
+
+          {/* Versionning */}
+          <div>
+            <h3
+              className="h3 fw-semibold mb-4"
+            >
+              Outils
+            </h3>
+            <div className="row g-4">
+              <SkillCard
+                icon={<SiGit size={50} color="#ec6149" />}
+                name="Git"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+              <SkillCard
+                icon={<SiXcode size={50} color="#ec6149" />}
+                name="Git"
                 darkMode={App.darkMode}
                 styles={styles}
               />

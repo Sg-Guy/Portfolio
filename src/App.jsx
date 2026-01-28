@@ -39,8 +39,8 @@ const infoProjet = {
     name: "StepByStep",
     image: step,
     description:
-      "Il s'agit d'une application web de gestionnaire de tâches . Développé en solo , j'ai appris à concevoir un système complet allant du cahier des charges au déploiement." ,
-      technologies: ["PHP", "Laravel", "MySql"],
+      "Il s'agit d'une application web de gestionnaire de tâches . Développé en solo , j'ai appris à concevoir un système complet allant du cahier des charges au déploiement.",
+    technologies: ["PHP", "Laravel", "MySql"],
   },
 };
 
@@ -356,16 +356,15 @@ function App() {
                   À propos
                 </h2>
                 <p className="lead" style={styles.textBody}>
-                  Actuellement en parcours de Génie Logiciel, j'ai choisi de
-                  mettre mes compétences au service de la création de solutions
-                  web modernes, intuitives et accessibles. Curieux, je conçois
-                  des sites vitrines, des applications web et des interfaces
-                  utilisateurs adaptées aux besoins réels. Mon objectif est
-                  simple : transformer vos idées en expériences numériques de
-                  qualité. Je maîtrise les bases du HTML, CSS, JavaScript, PHP,
-                  MySQL, ainsi que des frameworks et outils modernes comme
-                  React, Laravel et WordPress. Pour moi, chaque projet est une
-                  opportunité d'apprendre, d'innover et de créer de la valeur.
+                  Étudiant en Génie Logiciel, je me forme progressivement au
+                  développement informatique à travers des projets pratiques et
+                  des expérimentations personnelles. Je m’intéresse
+                  particulièrement au développement web/mobile et à la
+                  conception d’interfaces, avec une approche centrée sur la
+                  compréhension des bases et des bonnes pratiques. Ce portfolio
+                  présente mon parcours, mes apprentissages et les projets
+                  réalisés dans le cadre de ma formation et de mon
+                  auto-apprentissage.
                 </p>
               </div>
             </div>
