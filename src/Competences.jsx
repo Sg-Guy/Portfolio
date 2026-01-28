@@ -173,7 +173,7 @@ function Competences () {
               className="h3 fw-semibold mb-4"
               
             >
-              Front-end
+              Frontend
             </h3>
             <div className="row g-4">
               <SkillCard
@@ -208,7 +208,7 @@ function Competences () {
             <h3
               className="h3 fw-semibold mb-4"
             >
-              Back-end
+              Backend
             </h3>
             <div className="row g-4">
               <SkillCard
@@ -289,12 +289,6 @@ function Competences () {
             <div className="row g-4">
               <SkillCard
                 icon={<SiGit size={50} color="#ec6149" />}
-                name="Git"
-                darkMode={App.darkMode}
-                styles={styles}
-              />
-              <SkillCard
-                icon={<SiXcode size={50} color="#ec6149" />}
                 name="Git"
                 darkMode={App.darkMode}
                 styles={styles}
