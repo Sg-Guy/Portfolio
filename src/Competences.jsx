@@ -158,12 +158,12 @@ function Competences () {
                 darkMode={App.darkMode}
                 styles={styles}
               />
-              <SkillCard
+              {/*<SkillCard
                 icon={<SiCplusplus size={50} color="#02569B" />}
                 name="C++"
                 darkMode={App.darkMode}
                 styles={styles}
-              />
+              />*/}
             </div>
           </div>
           <br />
