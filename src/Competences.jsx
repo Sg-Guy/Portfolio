@@ -223,12 +223,12 @@ function Competences () {
                 darkMode={App.darkMode}
                 styles={styles}
               />
-              <SkillCard
+              {/* <SkillCard
                 icon={<SiFastapi size={50} color="#009688" />}
                 name="FastAPI"
                 darkMode={App.darkMode}
                 styles={styles}
-              />
+              /> */}
             </div>
           </div>
 
@@ -252,12 +252,12 @@ function Competences () {
                 darkMode={App.darkMode}
                 styles={styles}
               />
-              <SkillCard
+              {/*<SkillCard
                 icon={<SiOracle size={50} color="#F80000" />}
                 name="Oracle"
                 darkMode={App.darkMode}
                 styles={styles}
-              />
+              /> */}
             </div>
           </div>
 
