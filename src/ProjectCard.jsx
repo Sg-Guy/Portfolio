@@ -9,11 +9,12 @@ function ProjectCard({
   name,
   description,
   technologies,
+  onClick,
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="col-md-6 col-lg-4">
+    <div className="col-md-6 col-lg-4" onClick={onClick}>
       <div
         className="card h-100"
         style={{

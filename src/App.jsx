@@ -9,6 +9,9 @@ import campus from "./assets/campus.png";
 import tech from "./assets/tech.png";
 import zone from "./assets/zone.png";
 import ident_guy from "./assets/ident_guy.jpeg";
+import bmi from "./assets/bmi.png";
+import cmd from "./assets/cmd.png";
+import payement from "./assets/payement.png";
 import SocialIcon from "./SocialIcon";
 import SkillCard from "./SkillCard";
 import Formations from "./Formations";
@@ -16,11 +19,12 @@ import Competences from "./Competences";
 import ProjectCard from "./ProjectCard";
 import scrollToSection from "./ScrollToSection";
 import DevToolsWarning from "./DevToolWarning";
+import ProjectModal from "./ProjectModal";
 
 const infoProjet = {
   projet1: {
     name: "TechZone",
-    image: zone,
+    images: [zone],
     description:
       "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile.Il s'agit d'une application de vente d'objet technologique en ligne.  ",
     technologies: ["Dart", "Flutter", "Laravel", "MySql"],
@@ -30,23 +34,32 @@ const infoProjet = {
   },
   projet2: {
     name: "CampusConnect",
-    image: campus,
+    images: [campus],
     description:
       "Campus connect est un mini système d'information universitaire. Développé lors d'un cours , j'ai collaboré avec d'autres personnes. J'ai été à la fois au front-end et au back-end.",
     technologies: ["PHP", "Laravel", "MySql"],
   },
   projet3: {
     name: "StepByStep",
-    image: step,
+    images: [step],
     description:
       "Il s'agit d'une application web de gestionnaire de tâches . Développé en solo , j'ai appris à concevoir un système complet allant du cahier des charges au déploiement.",
     technologies: ["PHP", "Laravel", "MySql"],
+  },
+  projet4: {
+    name: "BmiShop",
+    images: [bmi, cmd, payement],
+    description:
+      "BmiShop est une application mobile de vente de pièces détachées pour les engins . Réalisée dans le cadre d'un hackaton , J'ai appris à concevoir une application mobile e-commerce et à faire de l'intégration API.",
+    technologies: ["Flutter", "Dart", "GetX"],
   },
 };
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [open, setOpen] = useState(false);
+
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const styles = {
     body: {
@@ -411,28 +424,38 @@ function App() {
             <div className="row g-4">
               <ProjectCard
                 darkMode={darkMode}
-                image={infoProjet.projet1.image}
+                image={infoProjet.projet4.images[0]}
                 styles={styles}
-                name={infoProjet.projet1.name}
-                description={infoProjet.projet1.description}
-                technologies={infoProjet.projet1.technologies}
+                name={infoProjet.projet4.name}
+                description={infoProjet.projet4.description}
+                technologies={infoProjet.projet4.technologies}
+                onClick={() => setSelectedProject(infoProjet.projet4)} 
               />
+
               <ProjectCard
                 darkMode={darkMode}
-                image={infoProjet.projet2.image}
+                image={infoProjet.projet2.images[0]}
                 name={infoProjet.projet2.name}
                 description={infoProjet.projet2.description}
                 technologies={infoProjet.projet2.technologies}
                 styles={styles}
+                onClick={() => setSelectedProject(infoProjet.projet2)} 
               />
               <ProjectCard
                 darkMode={darkMode}
-                image={infoProjet.projet3.image}
+                image={infoProjet.projet3.images[0]}
                 styles={styles}
                 name={infoProjet.projet3.name}
                 description={infoProjet.projet3.description}
                 technologies={infoProjet.projet3.technologies}
+                onClick={() => setSelectedProject(infoProjet.projet3)} 
               />
+              {selectedProject && (
+                <ProjectModal
+                  project={selectedProject}
+                  onClose={() => setSelectedProject(null)}
+                />
+              )}
             </div>
           </div>
         </div>
