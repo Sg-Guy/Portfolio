@@ -20,7 +20,8 @@ import ProjectCard from "./ProjectCard";
 import scrollToSection from "./ScrollToSection";
 import DevToolsWarning from "./DevToolWarning";
 import ProjectModal from "./ProjectModal";
-
+import ReactGA from "react-ga4";
+ReactGA.initialize("G-KXNRTXBTHE"); // Remplacez par votre propre ID de suivi GA4
 const infoProjet = {
   projet1: {
     name: "TechZone",
