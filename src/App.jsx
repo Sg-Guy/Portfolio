@@ -10,6 +10,9 @@ import tech from "./assets/tech.png";
 import zone from "./assets/zone.png";
 import ident_guy from "./assets/ident_guy.jpeg";
 import bmi from "./assets/bmi.png";
+import elect1 from "./assets/elect1.png";
+import elect2 from "./assets/elect2.png";
+import elect3 from "./assets/elect3.png";
 import cmd from "./assets/cmd.png";
 import payement from "./assets/payement.png";
 import SocialIcon from "./SocialIcon";
@@ -21,14 +24,14 @@ import scrollToSection from "./ScrollToSection";
 import DevToolsWarning from "./DevToolWarning";
 import ProjectModal from "./ProjectModal";
 import ReactGA from "react-ga4";
-ReactGA.initialize("G-KXNRTXBTHE"); // Remplacez par votre propre ID de suivi GA4
+ReactGA.initialize("G-KXNRTXBTHE"); // ID de suivi google Analytics
 const infoProjet = {
   projet1: {
     name: "TechZone",
     images: [zone],
     description:
       "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile.Il s'agit d'une application de vente d'objet technologique en ligne.  ",
-    technologies: ["Dart", "Flutter", "Laravel", "MySql"],
+    technologies: ["Dart", "Flutter", "GetX", "Laravel", "MySql"],
 
     details:
       "TechZone est une application mobile réalisé dans le cadre du cours de développement d'application mobile. Il s'agit d'une application de vente d'objet technologique en ligne.",
@@ -53,6 +56,18 @@ const infoProjet = {
     description:
       "BmiShop est une application mobile de vente de pièces détachées pour les engins . Réalisée dans le cadre d'un hackaton , J'ai appris à concevoir une application mobile e-commerce et à faire de l'intégration API.",
     technologies: ["Flutter", "Dart", "GetX"],
+  },
+  projet5: {
+    name: "ElectroShop",
+    images: [elect3, elect2 , elect1],
+    description: "Application web de gestion de stock via des opérations crud complètes et qui permet de suivre les commandes des utilisateurs. Elle intègre MyApi ",
+    technologies: ["React js", "Js", "Tailwind Css" , "motion"],
+  },
+  projet6: {
+    name: "MyApi",
+    images: [elect3, elect2 , elect1],
+    description: "MyApi est une API e-commerce conçue avec le framework laravel?des utilisateurs. Elle intègre MyApi ",
+    technologies: ["React js", "Js", "Tailwind Css" , "motion"],
   },
 };
 
@@ -412,7 +427,7 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Section Projets */}
       <section id="projets" className="py-5">
         <div className="container">
           <div style={styles.sectionBg}>
@@ -423,6 +438,24 @@ function App() {
               Mes Réalisations
             </h2>
             <div className="row g-4">
+              <ProjectCard
+                darkMode={darkMode}
+                image={infoProjet.projet6.images[0]}
+                styles={styles}
+                name={infoProjet.projet6.name}
+                description={infoProjet.projet6.description}
+                technologies={infoProjet.projet6.technologies}
+                onClick={() => setSelectedProject(infoProjet.projet6)} 
+              />
+              <ProjectCard
+                darkMode={darkMode}
+                image={infoProjet.projet5.images[0]}
+                styles={styles}
+                name={infoProjet.projet5.name}
+                description={infoProjet.projet5.description}
+                technologies={infoProjet.projet5.technologies}
+                onClick={() => setSelectedProject(infoProjet.projet5)} 
+              />
               <ProjectCard
                 darkMode={darkMode}
                 image={infoProjet.projet4.images[0]}
@@ -451,6 +484,15 @@ function App() {
                 technologies={infoProjet.projet3.technologies}
                 onClick={() => setSelectedProject(infoProjet.projet3)} 
               />
+              <ProjectCard
+                darkMode={darkMode}
+                image={infoProjet.projet1.images[0]}
+                styles={styles}
+                name={infoProjet.projet1.name}
+                description={infoProjet.projet1.description}
+                technologies={infoProjet.projet1.technologies}
+                onClick={() => setSelectedProject(infoProjet.projet1)} 
+              />
               {selectedProject && (
                 <ProjectModal
                   project={selectedProject}
@@ -462,7 +504,7 @@ function App() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/*  Section Contact */}
       <section id="contact" className="py-5">
         <div className="container">
           <h2
