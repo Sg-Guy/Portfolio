@@ -6,7 +6,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import img from "./assets/img.jpg";
 import step from "./assets/step.png";
 import campus from "./assets/campus.png";
-import tech from "./assets/tech.png";
+import api from "./assets/api.png";
 import zone from "./assets/zone.png";
 import ident_guy from "./assets/ident_guy.jpeg";
 import bmi from "./assets/bmi.png";
@@ -58,16 +58,16 @@ const infoProjet = {
     technologies: ["Flutter", "Dart", "GetX"],
   },
   projet5: {
-    name: "ElectroShop",
+    name: "ElectroShop", 
     images: [elect3, elect2 , elect1],
-    description: "Application web de gestion de stock via des opérations crud complètes et qui permet de suivre les commandes des utilisateurs. Elle intègre MyApi ",
+    description: "Application web de gestion de stock via des opérations crud complètes et qui permet de suivre les commandes des utilisateurs. Elle intègre 'MyApi' ",
     technologies: ["React js", "Js", "Tailwind Css" , "motion"],
   },
   projet6: {
     name: "MyApi",
-    images: [elect3, elect2 , elect1],
-    description: "MyApi est une API e-commerce conçue avec le framework laravel?des utilisateurs. Elle intègre MyApi ",
-    technologies: ["React js", "Js", "Tailwind Css" , "motion"],
+    images: [api],
+    description: "MyApi est une API e-commerce conçue avec le framework laravel.Elle offre des fonctionnalités de gestion de produits, de commandes et d'utilisateurs, avec une architecture RESTful pour faciliter l'intégration avec des applications front-end.",
+    technologies: ["Laravel", "PHP", "Sanctum"],
   },
 };
 

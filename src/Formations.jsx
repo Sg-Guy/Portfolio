@@ -1,16 +1,15 @@
-
 import { BiSolidGraduation } from "react-icons/bi";
+import { motion } from "framer-motion";
 
-function Formations () {
+function Formations() {
   const parcours = [
-    
     {
       annee: "2023 - 2026",
       titre: "Licence en Informatique",
-      lieu: "UAC-Institut de Formation et de Recherche en Informatique (IFRI)",
+      lieu: "UAC-IFRI",
       details: "Options : Génie Logiciel",
       color: "#011f38",
-      en_cours : true,
+      en_cours: true,
     },
     {
       annee: "2023-2024",
@@ -18,7 +17,7 @@ function Formations () {
       lieu: "Candidature Libre",
       details: "Mention : Assez-Bien",
       color: "#011f38",
-      en_cours : false,
+      en_cours: false,
     },
     {
       annee: "2022-2023",
@@ -26,15 +25,22 @@ function Formations () {
       lieu: "CEG YOKO",
       details: "Mention : Bien",
       color: "#011f38",
-      en_cours : false,
+      en_cours: false,
     },
   ];
 
   return (
     <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
       {parcours.map((item, index) => (
-        <div key={index} style={{ display: "flex", gap: "20px" }}>
-          {/* Colonne de gauche : La ligne et le point */}
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.2 }}
+          viewport={{ once: true }}
+          style={{ display: "flex", gap: "20px" }}
+        >
+          {/* Colonne gauche */}
           <div
             style={{
               display: "flex",
@@ -42,81 +48,98 @@ function Formations () {
               alignItems: "center",
             }}
           >
-            {/* Icon chapeau pour les formations  */}
-            <BiSolidGraduation
-              style={{
-                width: "30px",
-                height: "30px",
-                borderRadius: "50%",
-                //backgroundColor: item.color,
-                border: "4px solid rgba(255,255,255,0.1)",
-                boxShadow: `0 0 5px ${item.color}`,
-                zIndex: 0,
-              }}
+            {/* Icône animée */}
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.4 }}
+            >
+              <BiSolidGraduation
+                style={{
+                  width: "30px",
+                  height: "30px",
+                  borderRadius: "50%",
+                  border: "4px solid rgba(255,255,255,0.1)",
+                  boxShadow: `0 0 10px ${item.color}`,
+                }}
+              />
+            </motion.div>
 
-            />
-            
-
-            {/* La ligne (sauf pour le dernier élément) */}
+            {/* Ligne */}
             {index !== parcours.length - 1 && (
-              <div
+              <motion.div
+                initial={{ height: 0 }}
+                whileInView={{ height: "100%" }}
+                transition={{ duration: 0.6 }}
                 style={{
                   width: "2px",
                   flexGrow: 1,
                   backgroundColor: "#475569",
-                  margin: "1px 0",
+                  margin: "5px 0",
                 }}
-              ></div>
+              />
             )}
           </div>
 
-          {/* Colonne de droite : Le contenu */}
+          {/* Contenu */}
           <div style={{ paddingBottom: "40px", flex: 1 }}>
             <span
-                style={{
-                  fontSize: "0.85rem",
-                  fontWeight: "bold",
-                  //color: item.color,
-                  textTransform: "uppercase",
-                }}
-              >
-                {item.annee} 
-              </span>
-            <div
+              style={{
+                fontSize: "0.85rem",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+                color: "#94a3b8",
+              }}
+            >
+              {item.annee}
+            </span>
+
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 200 }}
               style={{
                 backgroundColor: "rgba(30, 41, 59, 0.7)",
                 padding: "20px",
                 borderRadius: "12px",
-                //borderLeft: `4px solid ${item.color}`,
                 backdropFilter: "blur(5px)",
+                cursor: "pointer",
               }}
             >
-              {item.en_cours ? (<span className="badge badge-sm text-success rounded" style={{
-                border : ' 0.1px solid',
-                background : 'white'
-              }}> en cours</span>) : ''}
-              <h3
-                style={{ margin: "5px 0", fontSize: "1.25rem", color: "#fff" }}
-              >
+              {item.en_cours && (
+                <span
+                  style={{
+                    border: "0.5px solid",
+                    background: "white",
+                    color: "#067a3a",
+                    padding: "2px 8px",
+                    borderRadius: "8px",
+                    fontSize: "0.75rem",
+                  }}
+                >
+                  en cours
+                </span>
+              )}
+
+              <h3 style={{ margin: "5px 0", color: "#fff" }}>
                 {item.titre}
               </h3>
-              <h4
+
+              <h4 style={{ color: "#94a3b8" }}>{item.lieu}</h4>
+
+              <p
                 style={{
-                  margin: "0 0 10px 0",
-                  fontSize: "1rem",
-                  color: "#94a3b8",
+                  color: "#cbd5e1",
+                  fontStyle: "italic",
                 }}
               >
-                {item.lieu}
-              </h4>
-              <p style={{ margin: 0, color: "#cbd5e1", fontSize: "0.95rem" , fontStyle : 'italic' }}>
                 {item.details}
               </p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
-};
-export default Formations ;
+}
+
+export default Formations;

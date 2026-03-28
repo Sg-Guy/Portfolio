@@ -9,16 +9,10 @@ import {
   SiHtml5,
   SiBootstrap,
   SiFlutter,
-  SiFastapi,
   SiSqlite,
-  SiOracle,
   SiGit,
-  SiVscodium,
   SiPython,
   SiJavascript,
-  SiC,
-  SiCplusplus,
-  SiXcode,
 } from "react-icons/si";
 
 function Competences () {
