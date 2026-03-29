@@ -24,6 +24,7 @@ import scrollToSection from "./ScrollToSection";
 import DevToolsWarning from "./DevToolWarning";
 import ProjectModal from "./ProjectModal";
 import ReactGA from "react-ga4";
+import TypewriterComponent from "typewriter-effect";
 ReactGA.initialize("G-KXNRTXBTHE"); // ID de suivi google Analytics
 const infoProjet = {
   projet1: {
@@ -293,10 +294,31 @@ function App() {
             <div className="col-lg-10 text-center">
               <img src={ident_guy} alt="imgr" style={styles.profil} />
               <h6 className="display-4 mb-3" style={styles.heroTitle}>
-                Guillaume SAGBO
+                <TypewriterComponent 
+                  options={{
+                    strings: ["Guillaume SAGBO"],
+                    autoStart: true, // Démarre automatiquement
+                    loop: false, // Permet de faire tourner les phrases en boucle
+                    delay: 100, // Vitesse de frappe du texte
+                    deleteSpeed: Infinity,  // Vitesse de suppression du texte
+                    cursor: "",
+                     // Personnalisation du curseur
+                  }}
+                />
+                
               </h6>
               <p className="fs-5 mb-3" style={styles.textMuted}>
-                Développeur Full Stack | Junior
+                <TypewriterComponent 
+                  options={{
+                    strings: [" Développeur Full Stack | Junior"],
+                    autoStart: true, // Démarre automatiquement
+                    loop: false, // Permet de faire tourner les phrases en boucle
+                    delay: 80, // Vitesse de frappe du texte
+                    deleteSpeed: Infinity,  // Vitesse de suppression du texte
+                    cursor: "",
+                     // Personnalisation du curseur
+                  }}
+                />
               </p>
               <div className="d-flex justify-content-center gap-4">
                 <SocialIcon
