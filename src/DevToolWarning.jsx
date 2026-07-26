@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./DevToolsWarning.css"; // On stylise le modal avec du CSS
+import "./DevToolsWarning.css"; 
 
 export default function DevToolsWarning() {
   const [showWarning, setShowWarning] = useState(false);
