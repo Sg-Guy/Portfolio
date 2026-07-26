@@ -59,15 +59,17 @@ const infoProjet = {
     technologies: ["Flutter", "Dart", "GetX"],
   },
   projet5: {
-    name: "ElectroShop", 
-    images: [elect3, elect2 , elect1],
-    description: "Application web de gestion de stock via des opérations crud complètes et qui permet de suivre les commandes des utilisateurs. Elle intègre 'MyApi' ",
-    technologies: ["React js", "Js", "Tailwind Css" , "motion"],
+    name: "ElectroShop",
+    images: [elect3, elect2, elect1],
+    description:
+      "Application web de gestion de stock via des opérations crud complètes et qui permet de suivre les commandes des utilisateurs. Elle intègre 'MyApi' ",
+    technologies: ["React js", "Js", "Tailwind Css", "motion"],
   },
   projet6: {
     name: "MyApi",
     images: [api],
-    description: "MyApi est une API e-commerce conçue avec le framework laravel.Elle offre des fonctionnalités de gestion de produits, de commandes et d'utilisateurs, avec une architecture RESTful pour faciliter l'intégration avec des applications front-end.",
+    description:
+      "API REST sécurisée développée avec Laravel et Sanctum permettant la gestion des utilisateurs, produits, commandes et authentification. Architecture pensée pour être consommée par plusieurs clients web ou mobiles.",
     technologies: ["Laravel", "PHP", "Sanctum"],
   },
 };
@@ -294,29 +296,28 @@ function App() {
             <div className="col-lg-10 text-center">
               <img src={ident_guy} alt="imgr" style={styles.profil} />
               <h6 className="display-4 mb-3" style={styles.heroTitle}>
-                <TypewriterComponent 
+                <TypewriterComponent
                   options={{
                     strings: ["Guillaume SAGBO"],
                     autoStart: true, // Démarre automatiquement
                     loop: false, // Permet de faire tourner les phrases en boucle
                     delay: 100, // Vitesse de frappe du texte
-                    deleteSpeed: Infinity,  // Vitesse de suppression du texte
+                    deleteSpeed: Infinity, // Vitesse de suppression du texte
                     cursor: "",
-                     // Personnalisation du curseur
+                    // Personnalisation du curseur
                   }}
                 />
-                
               </h6>
               <p className="fs-5 mb-3" style={styles.textMuted}>
-                <TypewriterComponent 
+                <TypewriterComponent
                   options={{
-                    strings: [" Développeur Full Stack | Junior"],
+                    strings: [" Développeur Backend | Laravel"],
                     autoStart: true, // Démarre automatiquement
                     loop: false, // Permet de faire tourner les phrases en boucle
                     delay: 80, // Vitesse de frappe du texte
-                    deleteSpeed: Infinity,  // Vitesse de suppression du texte
+                    deleteSpeed: Infinity, // Vitesse de suppression du texte
                     cursor: "",
-                     // Personnalisation du curseur
+                    // Personnalisation du curseur
                   }}
                 />
               </p>
@@ -357,9 +358,12 @@ function App() {
                   ...styles.textBody,
                 }}
               >
-                Actuellement étudiant en Génie Logiciel à IFRI. Passionné par le
-                développement web et mobile, je construis petit à petit mon
-                univers numérique.
+                spécialisé dans le développement backend avec Laravel. Je
+                conçois des API REST, des bases de données et des applications
+                web performantes, tout en disposant de compétences en frontend
+                et en développement mobile. J'aime résoudre des problèmes
+                techniques et construire des solutions robustes répondant à des
+                besoins réels.
               </p>
               <div className="d-flex gap-3 justify-content-center flex-wrap">
                 <button
@@ -407,15 +411,14 @@ function App() {
                   À propos
                 </h2>
                 <p className="lead" style={styles.textBody}>
-                  Étudiant en Génie Logiciel, je me forme progressivement au
-                  développement informatique à travers des projets pratiques et
-                  des expérimentations personnelles. Je m’intéresse
-                  particulièrement au développement web/mobile et à la
-                  conception d’interfaces, avec une approche centrée sur la
-                  compréhension des bases et des bonnes pratiques. Ce portfolio
-                  présente mon parcours, mes apprentissages et les projets
-                  réalisés dans le cadre de ma formation et de mon
-                  auto-apprentissage.
+                  Étudiant en Génie Logiciel à l'IFRI, je développe des
+                  applications web et mobiles en mettant l'accent sur la qualité
+                  du backend. Au fil de mes projets, j'ai conçu des API REST,
+                  des systèmes d'authentification, des bases de données
+                  relationnelles et des applications complètes avec Laravel.
+                  Curieux et rigoureux, je cherche aujourd'hui à rejoindre une
+                  équipe où je pourrai contribuer à des projets ambitieux tout
+                  en continuant à progresser.
                 </p>
               </div>
             </div>
@@ -467,7 +470,7 @@ function App() {
                 name={infoProjet.projet6.name}
                 description={infoProjet.projet6.description}
                 technologies={infoProjet.projet6.technologies}
-                onClick={() => setSelectedProject(infoProjet.projet6)} 
+                onClick={() => setSelectedProject(infoProjet.projet6)}
               />
               <ProjectCard
                 darkMode={darkMode}
@@ -476,7 +479,7 @@ function App() {
                 name={infoProjet.projet5.name}
                 description={infoProjet.projet5.description}
                 technologies={infoProjet.projet5.technologies}
-                onClick={() => setSelectedProject(infoProjet.projet5)} 
+                onClick={() => setSelectedProject(infoProjet.projet5)}
               />
               <ProjectCard
                 darkMode={darkMode}
@@ -485,7 +488,7 @@ function App() {
                 name={infoProjet.projet4.name}
                 description={infoProjet.projet4.description}
                 technologies={infoProjet.projet4.technologies}
-                onClick={() => setSelectedProject(infoProjet.projet4)} 
+                onClick={() => setSelectedProject(infoProjet.projet4)}
               />
 
               <ProjectCard
@@ -495,7 +498,7 @@ function App() {
                 description={infoProjet.projet2.description}
                 technologies={infoProjet.projet2.technologies}
                 styles={styles}
-                onClick={() => setSelectedProject(infoProjet.projet2)} 
+                onClick={() => setSelectedProject(infoProjet.projet2)}
               />
               <ProjectCard
                 darkMode={darkMode}
@@ -504,7 +507,7 @@ function App() {
                 name={infoProjet.projet3.name}
                 description={infoProjet.projet3.description}
                 technologies={infoProjet.projet3.technologies}
-                onClick={() => setSelectedProject(infoProjet.projet3)} 
+                onClick={() => setSelectedProject(infoProjet.projet3)}
               />
               <ProjectCard
                 darkMode={darkMode}
@@ -513,7 +516,7 @@ function App() {
                 name={infoProjet.projet1.name}
                 description={infoProjet.projet1.description}
                 technologies={infoProjet.projet1.technologies}
-                onClick={() => setSelectedProject(infoProjet.projet1)} 
+                onClick={() => setSelectedProject(infoProjet.projet1)}
               />
               {selectedProject && (
                 <ProjectModal

@@ -13,6 +13,9 @@ import {
   SiGit,
   SiPython,
   SiJavascript,
+  SiPostgresql,
+  SiGetx,
+  SiGithub,
 } from "react-icons/si";
 
 function Competences () {
@@ -161,7 +164,54 @@ function Competences () {
             </div>
           </div>
           <br />
-        {/* Frontend */}
+
+          {/* Backend */}
+          <div className="mb-5">
+            <h3
+              className="h3 fw-semibold mb-4"
+            >
+              Backend
+            </h3>
+            <div className="row g-4">
+              <SkillCard
+                icon={<SiLaravel size={50} color="#FF2D20" />}
+                name="Laravel"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+              <SkillCard
+                icon={<SiPhp size={50} color="#777BB4" />}
+                name="PHP"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+              <SkillCard
+                icon={<SiMysql size={50} color="#4479A1" />}
+                name="MySQL"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+              <SkillCard
+                icon={<SiPostgresql size={50} color="#4479A1" />}
+                name="PostgreSQL"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+              <SkillCard
+                icon={<SiSqlite size={50} color="#003B57" />}
+                name="SQLite"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+              {/* <SkillCard
+                icon={<SiFastapi size={50} color="#009688" />}
+                name="FastAPI"
+                darkMode={App.darkMode}
+                styles={styles}
+              /> */}
+            </div>
+          </div>
+          {/* Frontend */}
           <div className="mb-5">
             <h3
               className="h3 fw-semibold mb-4"
@@ -170,6 +220,12 @@ function Competences () {
               Frontend
             </h3>
             <div className="row g-4">
+              <SkillCard
+                icon={<SiReact size={50} color="#61DAFB" />}
+                name="React.js"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
               <SkillCard
                 icon={<SiHtml5 size={50} color="#E34F26" />}
                 name="HTML/CSS"
@@ -182,76 +238,31 @@ function Competences () {
                 darkMode={App.darkMode}
                 styles={styles}
               />
-              <SkillCard
-                icon={<SiReact size={50} color="#61DAFB" />}
-                name="React.js"
-                darkMode={App.darkMode}
-                styles={styles}
-              />
+            </div>
+          </div>
+
+          {/* Mobile */}
+          <div className="mb-5">
+            <h3
+              className="h3 fw-semibold mb-4"
+              
+            >
+              Mobile
+            </h3>
+            <div className="row g-4">
+              
               <SkillCard
                 icon={<SiFlutter size={50} color="#02569B" />}
                 name="Flutter"
                 darkMode={App.darkMode}
                 styles={styles}
               />
-            </div>
-          </div>
-
-          {/* Backend */}
-          <div className="mb-5">
-            <h3
-              className="h3 fw-semibold mb-4"
-            >
-              Backend
-            </h3>
-            <div className="row g-4">
               <SkillCard
-                icon={<SiPhp size={50} color="#777BB4" />}
-                name="PHP"
+                icon={<SiGetx size={50} color="#02569B" />}
+                name="GetX"
                 darkMode={App.darkMode}
                 styles={styles}
               />
-              <SkillCard
-                icon={<SiLaravel size={50} color="#FF2D20" />}
-                name="Laravel"
-                darkMode={App.darkMode}
-                styles={styles}
-              />
-              {/* <SkillCard
-                icon={<SiFastapi size={50} color="#009688" />}
-                name="FastAPI"
-                darkMode={App.darkMode}
-                styles={styles}
-              /> */}
-            </div>
-          </div>
-
-          {/* Database */}
-          <div className="mb-5">
-            <h3
-              className="h3 fw-semibold mb-4"
-            >
-              Base de données
-            </h3>
-            <div className="row g-4">
-              <SkillCard
-                icon={<SiMysql size={50} color="#4479A1" />}
-                name="MySQL"
-                darkMode={App.darkMode}
-                styles={styles}
-              />
-              <SkillCard
-                icon={<SiSqlite size={50} color="#003B57" />}
-                name="SQLite"
-                darkMode={App.darkMode}
-                styles={styles}
-              />
-              {/*<SkillCard
-                icon={<SiOracle size={50} color="#F80000" />}
-                name="Oracle"
-                darkMode={App.darkMode}
-                styles={styles}
-              /> */}
             </div>
           </div>
 
@@ -284,6 +295,12 @@ function Competences () {
               <SkillCard
                 icon={<SiGit size={50} color="#ec6149" />}
                 name="Git"
+                darkMode={App.darkMode}
+                styles={styles}
+              />
+              <SkillCard
+                icon={<SiGithub size={50} color="#ec6149" />}
+                name="Github"
                 darkMode={App.darkMode}
                 styles={styles}
               />
