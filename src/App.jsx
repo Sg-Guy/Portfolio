@@ -2,18 +2,18 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
-import ProjectCard from "./Components/ProjectCard";
+import ProjectCard from "./components/ProjectCard";
 
-import ProjectModal from "./Components/ProjectModal";
+import ProjectModal from "./components/ProjectModal";
 import ReactGA from "react-ga4";
 import TypewriterComponent from "typewriter-effect";
 import Navbar from "./components/NavBar";
 import Hero from "./components/HeroSection";
 import About from "./Components/About";
-import Experiences from "./Components/Experiences";
-import Competences from "./Components/Competences";
+import Experiences from "./components/Experiences";
+import Competences from "./components/Competences";
 import Projects from "./components/Projects";
-import Formations from "./Components/Formations";
+import Formations from "./components/Formations";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 ReactGA.initialize("G-KXNRTXBTHE"); // ID de suivi google Analytics
