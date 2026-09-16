@@ -9,7 +9,7 @@ import ReactGA from "react-ga4";
 import TypewriterComponent from "typewriter-effect";
 import Navbar from "./components/NavBar";
 import Hero from "./components/HeroSection";
-import About from "./Components/About";
+import About from "./components/About";
 import Experiences from "./components/Experiences";
 import Competences from "./components/Competences";
 import Projects from "./components/Projects";
